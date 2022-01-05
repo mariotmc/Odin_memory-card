@@ -1,0 +1,8 @@
+@use "functions" as *;
+@use "variables" as *;
+
+footer {
+  width: 100%;
+  height: rem(50);
+  background-color: var(--red);
+}

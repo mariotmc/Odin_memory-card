@@ -1,0 +1,28 @@
+@use "functions" as *;
+@use "variables" as *;
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: rem(100);
+  margin: rem(50) 0;
+
+  .score {
+    width: 25%;
+    padding: rem(8);
+    color: var(--gray);
+    font-size: rem(20);
+    font-weight: 700;
+    border-radius: rem(20);
+    box-shadow: hsla(0%, 0%, 0%, 0.35) 0 rem(5) rem(15);
+  }
+
+  .current-score {
+    background-color: var(--light-red);
+  }
+
+  .best-score {
+    background-color: var(--light-green);
+  }
+}

@@ -22,28 +22,29 @@ import venusaur from "../media/venusaur.png";
 import zapdos from "../media/zapdos.png";
 
 const Cards = () => {
+  //prettier-ignore
+  const pokemons = [[articuno, "Articuno"], [blastoise, "Blastoise"], [charizard, "Charizard"], [dialga, "Dialga"], [giratina, "Giratina"], [groudon, "Groudon"],
+    [infernape, "Infernape"], [kyogre, "Kyogre"], [latias, "Latias"], [latios, "Latios"], [lugia, "Lugia"], [mew, "Mew"], [mewtwo, "Mewtwo"], [moltres, "Moltres"],
+    [palkia, "Palkia"], [pikachu, "Pikachu"], [rayquaza, "Rayquaza"], [sceptile, "Sceptile"], [venusaur, "Venusaur"], [zapdos, "Zapdos"]];
+
+  const shuffleCards = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      let random = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[random]] = [arr[random], arr[i]];
+    }
+  };
+
   return (
     <div className="cards">
-      <Card image={articuno} name={"Articuno"} />
-      <Card image={blastoise} name={"Blastoise"} />
-      <Card image={charizard} name={"Charizard"} />
-      <Card image={dialga} name={"Dialga"} />
-      <Card image={giratina} name={"Giratina"} />
-      <Card image={groudon} name={"Groudon"} />
-      <Card image={infernape} name={"Infernape"} />
-      <Card image={kyogre} name={"Kyogre"} />
-      <Card image={latias} name={"Latias"} />
-      <Card image={latios} name={"Latios"} />
-      <Card image={lugia} name={"Lugia"} />
-      <Card image={mew} name={"Mew"} />
-      <Card image={mewtwo} name={"Mewtwo"} />
-      <Card image={moltres} name={"Moltres"} />
-      <Card image={palkia} name={"Palkia"} />
-      <Card image={pikachu} name={"Pikachu"} />
-      <Card image={rayquaza} name={"Rayquaza"} />
-      <Card image={sceptile} name={"Sceptile"} />
-      <Card image={venusaur} name={"Venusaur"} />
-      <Card image={zapdos} name={"Zapdos"} />
+      {(() => {
+        let container = [];
+        shuffleCards(pokemons);
+        const arr = pokemons;
+        arr.forEach((element, index) => {
+          container.push(<Card key={index} image={element[0]} name={element[1]} />);
+        });
+        return container;
+      })()}
     </div>
   );
 };

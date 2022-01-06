@@ -1,10 +1,10 @@
 import React from "react";
 
-const Card = (pokemon) => {
+const Card = (props) => {
   return (
     <div className="card">
-      <img src={pokemon.image} alt={pokemon.name} />
-      <p>{pokemon.name}</p>
+      <img src={props.image} alt={props.name} />
+      <p>{props.name}</p>
     </div>
   );
 };

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cta-button {
+    @apply block h-12 w-full p-1 bg-customRed text-white font-bold rounded-lg;
+  }
+
+  .heading {
+    @apply pb-5 text-3xl text-center font-bold;
+  }
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+}

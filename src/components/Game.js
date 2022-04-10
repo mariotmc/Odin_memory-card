@@ -9,6 +9,7 @@ const Game = () => {
   const [guesses, setGuesses] = useState([]);
   const [score, setScore] = useState(0);
   const [highscore, setHighscore] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const guessing = useCallback(
     (e) => {
@@ -50,9 +51,9 @@ const Game = () => {
       >
         Home
       </Link>
-      <Scoreboard score={score} highscore={highscore} />
+      <Scoreboard score={score} highscore={highscore} setOpen={setOpen} />
       <Cards />
-      <InstructionsPopup />
+      <InstructionsPopup open={open} setOpen={setOpen} />
     </motion.div>
   );
 };

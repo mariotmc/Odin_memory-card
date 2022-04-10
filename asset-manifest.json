@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Odin_memory-card/static/css/main.5dc95699.css",
-    "main.js": "/Odin_memory-card/static/js/main.a52cb20e.js",
+    "main.css": "/Odin_memory-card/static/css/main.454aebec.css",
+    "main.js": "/Odin_memory-card/static/js/main.7eb117a1.js",
     "static/media/logo.png": "/Odin_memory-card/static/media/logo.70706317976000c09e6c.png",
     "static/media/pokeball.svg": "/Odin_memory-card/static/media/pokeball.e57f7ae634ea599f04f057a700d4bbe2.svg",
     "index.html": "/Odin_memory-card/index.html",
-    "main.5dc95699.css.map": "/Odin_memory-card/static/css/main.5dc95699.css.map",
-    "main.a52cb20e.js.map": "/Odin_memory-card/static/js/main.a52cb20e.js.map"
+    "main.454aebec.css.map": "/Odin_memory-card/static/css/main.454aebec.css.map",
+    "main.7eb117a1.js.map": "/Odin_memory-card/static/js/main.7eb117a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.5dc95699.css",
-    "static/js/main.a52cb20e.js"
+    "static/css/main.454aebec.css",
+    "static/js/main.7eb117a1.js"
   ]
 }

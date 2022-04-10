@@ -41,39 +41,13 @@ a:active {
   text-decoration: none;
 }
 
-.rec {
-  .rec-carousel-item {
-    align-self: center;
-  }
+#left-button,
+#right-button {
+  color: var(--gray);
+  background-color: var(--off-white);
 
-  .rec-arrow,
-  .rec-arrow:hover,
-  .rec-arrow:focus {
-    color: var(--gray);
-    background-color: var(--off-white);
-
-    &:hover {
-      background-color: var(--red);
-    }
-
-    &:active,
-    &:focus {
-      color: var(--gray);
-      background-color: var(--off-white);
-    }
-
-    &:focus:not(:focus-visible) {
-      &:hover {
-        color: white;
-        background-color: var(--red);
-      }
-    }
-  }
-
-  .rec-dot:hover,
-  .rec-dot:focus,
-  .rec-dot_active {
+  &:hover {
+    color: #fff;
     background-color: var(--red);
-    box-shadow: 0 0 1px 2px var(--gray);
   }
 }

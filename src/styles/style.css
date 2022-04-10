@@ -121,9 +121,8 @@ header img {
 
 .scoreboard {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
-  gap: 1.875rem;
   margin: 0;
 }
 .scoreboard .score {

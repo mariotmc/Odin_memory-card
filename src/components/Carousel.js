@@ -1,9 +1,17 @@
 import { useRef } from "react";
 import Carousel from "react-elastic-carousel";
+import { useEffect } from "react";
 import CarouselItem from "./CarouselItem";
 
 const NewCarousel = () => {
   const carouselRef = useRef();
+
+  useEffect(() => {
+    const buttonLeft = document.querySelector(".rec-arrow-left");
+    const buttonRight = document.querySelector(".rec-arrow-right");
+    buttonLeft.setAttribute("id", "left-button");
+    buttonRight.setAttribute("id", "right-button");
+  }, []);
 
   return (
     <div className="flex justify-center items-center w-full px-5 pb-12">
@@ -13,6 +21,7 @@ const NewCarousel = () => {
         itemsToScroll={1}
         transitionMs={500}
         disableArrowsOnEnd={false}
+        renderPagination={() => <></>}
         onPrevStart={(nextItemObject) => {
           if (nextItemObject.index === 0) carouselRef.current.goTo(5);
         }}

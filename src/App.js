@@ -1,50 +1,27 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
-import Scoreboard from "./components/Scoreboard";
-import Cards from "./components/Cards";
+import Home from "./components/Home";
+import Game from "./components/Game";
 import Footer from "./components/Footer";
 import "./styles/style.css";
+import "./styles/tailwind.css";
 
 const App = () => {
-  const [guesses, setGuesses] = useState([]);
-  const [score, setScore] = useState(0);
-  const [highscore, setHighscore] = useState(0);
-
-  const guessing = useCallback(
-    (e) => {
-      let newGuess = e.target.parentNode.children[1].innerText;
-      if (!guesses.includes(newGuess)) {
-        setGuesses([...guesses, newGuess]);
-        setScore(score + 1);
-      } else if (guesses.includes(newGuess)) {
-        setGuesses([]);
-        setScore(0);
-      }
-    },
-    [guesses, score]
-  );
-
-  useEffect(() => {
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach((element) => element.addEventListener("click", guessing));
-
-    if (score > highscore) setHighscore(score);
-
-    return () => {
-      cards.forEach((element) => element.removeEventListener("click", guessing));
-    };
-  }, [guessing, highscore, score]);
-
   return (
-    <>
+    <div id="top" className="h-full flex flex-col">
       <Header />
-      <main>
-        <Scoreboard score={score} highscore={highscore} />
-        <Cards />
+      <main className="flex flex-col items-center">
+        <AnimatePresence exitBeforeEnter>
+          <Routes>
+            <Route path="/Odin_memory-card/" element={<Home />} />
+            <Route path="/Odin_memory-card/play" element={<Game />} />
+            <Route />
+          </Routes>
+        </AnimatePresence>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

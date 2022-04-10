@@ -3,9 +3,8 @@
 
 .scoreboard {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
-  gap: rem(30);
   margin: 0;
 
   .score {

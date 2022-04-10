@@ -46,33 +46,33 @@ a:active {
     align-self: center;
   }
 
-  .rec-arrow {
-    background-color: transparent;
-  }
-
+  .rec-arrow,
   .rec-arrow:hover,
-  .rec-arrow:focus,
-  .eWjCzc:focus:enabled {
-    background-color: var(--red);
+  .rec-arrow:focus {
+    color: var(--gray);
+    background-color: var(--off-white);
 
     &:hover {
-      color: white;
       background-color: var(--red);
+    }
+
+    &:active,
+    &:focus {
+      color: var(--gray);
+      background-color: var(--off-white);
+    }
+
+    &:focus:not(:focus-visible) {
+      &:hover {
+        color: white;
+        background-color: var(--red);
+      }
     }
   }
 
-  .eWjCzc:focus:enabled {
-    color: var(--gray);
-    background-color: transparent;
-  }
-
-  .rec-dot:focus,
-  .rec-dot:active {
-    box-shadow: 0 0 1px px var(--gray);
-  }
-
   .rec-dot:hover,
-  .krmNah {
+  .rec-dot:focus,
+  .rec-dot_active {
     background-color: var(--red);
     box-shadow: 0 0 1px 2px var(--gray);
   }

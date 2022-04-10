@@ -2,6 +2,7 @@
 :root {
   --font-main: "Nunito", sans-serif;
   --red: #ef0e3d;
+  --dark-red: rgb(148, 8, 38);
   --gray: #383838;
   --off-white: #eeeeee;
   --light-red: #ffb5b5;
@@ -10,9 +11,7 @@
 
 html {
   position: relative;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
   font-size: 100%;
   box-sizing: border-box;
 }
@@ -48,6 +47,37 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+.rec .rec-carousel-item {
+  align-self: center;
+}
+.rec .rec-arrow {
+  background-color: transparent;
+}
+.rec .rec-arrow:hover,
+.rec .rec-arrow:focus,
+.rec .eWjCzc:focus:enabled {
+  background-color: var(--red);
+}
+.rec .rec-arrow:hover:hover,
+.rec .rec-arrow:focus:hover,
+.rec .eWjCzc:focus:enabled:hover {
+  color: white;
+  background-color: var(--red);
+}
+.rec .eWjCzc:focus:enabled {
+  color: var(--gray);
+  background-color: transparent;
+}
+.rec .rec-dot:focus,
+.rec .rec-dot:active {
+  box-shadow: 0 0 1px px var(--gray);
+}
+.rec .rec-dot:hover,
+.rec .krmNah {
+  background-color: var(--red);
+  box-shadow: 0 0 1px 2px var(--gray);
 }
 
 header {
@@ -93,17 +123,18 @@ header img {
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 6.25rem;
-  margin: 3.125rem 0;
+  gap: 1.875rem;
+  margin: 0;
 }
 .scoreboard .score {
-  width: 25%;
+  min-width: 10.9375rem;
   padding: 0.5rem;
   color: var(--gray);
   font-size: 1.25rem;
   font-weight: 700;
   border-radius: 1.25rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0 0.3125rem 0.9375rem;
+  color: var(--gray);
 }
 .scoreboard .current-score {
   background-color: var(--light-red);
@@ -118,7 +149,7 @@ header img {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
-  padding: 0 1.875rem 6.25rem;
+  padding: 1.875rem;
   text-align: center;
 }
 
@@ -129,7 +160,7 @@ header img {
   padding: 0.625rem;
   border-radius: 1.25rem;
   background-color: var(--off-white);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: hsla(0deg, 0%, 0%, 0.35) 0px 5px 15px;
   transition: transform 0.3s ease 0s;
   cursor: pointer;
 }
@@ -148,10 +179,7 @@ header img {
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  height: 3.125rem;
+  min-height: 3.125rem;
   background-color: var(--red);
 }/*# sourceMappingURL=style.css.map */

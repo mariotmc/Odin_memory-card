@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Hero from "./Hero";
 import { Testimonial } from "./Testimonial";
 import { TrustedCompanies } from "./TrustedCompanies";
-import Carousel from "./Carousel";
+import NewCarousel from "./Carousel";
 import Video from "./Video";
 import SectionHeading from "./SectionHeading";
 
@@ -21,7 +21,7 @@ const Home = () => {
 
       <section id="benefits" className="w-full">
         <SectionHeading title="Educational Benefits" />
-        <Carousel />
+        <NewCarousel />
         <Video video="https://www.youtube.com/embed/sAxIspQr3R0" />
       </section>
 

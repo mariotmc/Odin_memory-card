@@ -1,14 +1,11 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ArrowRightIcon, XIcon, CheckIcon } from "@heroicons/react/outline";
 import Charizard from "../media/charizard.png";
 import Pikachu from "../media/pikachu.png";
 import Blastoise from "../media/blastoise.png";
 
-const InstructionsPopup = () => {
-  const [open, setOpen] = useState(false);
-  const [tutorialSeen, setTutorialSeen] = useState(false);
-
+const InstructionsPopup = ({ open, setOpen }) => {
   useEffect(() => {
     if (!localStorage.tutorial) setOpen(true);
   }, []);

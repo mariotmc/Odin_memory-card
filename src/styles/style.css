@@ -49,39 +49,15 @@ a:active {
   text-decoration: none;
 }
 
-.rec .rec-carousel-item {
-  align-self: center;
-}
-.rec .rec-arrow,
-.rec .rec-arrow:hover,
-.rec .rec-arrow:focus {
+#left-button,
+#right-button {
   color: var(--gray);
   background-color: var(--off-white);
 }
-.rec .rec-arrow:hover,
-.rec .rec-arrow:hover:hover,
-.rec .rec-arrow:focus:hover {
+#left-button:hover,
+#right-button:hover {
+  color: #fff;
   background-color: var(--red);
-}
-.rec .rec-arrow:active, .rec .rec-arrow:focus,
-.rec .rec-arrow:hover:active,
-.rec .rec-arrow:hover:focus,
-.rec .rec-arrow:focus:active,
-.rec .rec-arrow:focus:focus {
-  color: var(--gray);
-  background-color: var(--off-white);
-}
-.rec .rec-arrow:focus:not(:focus-visible):hover,
-.rec .rec-arrow:hover:focus:not(:focus-visible):hover,
-.rec .rec-arrow:focus:focus:not(:focus-visible):hover {
-  color: white;
-  background-color: var(--red);
-}
-.rec .rec-dot:hover,
-.rec .rec-dot:focus,
-.rec .rec-dot_active {
-  background-color: var(--red);
-  box-shadow: 0 0 1px 2px var(--gray);
 }
 
 header {
